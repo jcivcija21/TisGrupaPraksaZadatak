@@ -79,12 +79,7 @@ public class ProductRepositoryInMemory implements ProductRepository {
 
     @Override
     public Integer fetchProductsMetadataCount() {
-        Integer count = 0;
-        for (ProductsMetadata productsMetadata : productsMetadataList) {
-            count++;
-        }
-
-        return count;
+        return productsMetadataList.size();
     }
 
     @Override

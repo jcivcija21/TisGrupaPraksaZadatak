@@ -6,12 +6,12 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class ProductsMetadata {
-    private long id;
+    private Long id;
     private LocalDate datumKreiranja;
     private String naslov;
     private List<Product> listaProizvoda;
 
-    public ProductsMetadata(long id, LocalDate datumKreiranja, String naslov, List<Product> listaProizvoda){
+    public ProductsMetadata(Long id, LocalDate datumKreiranja, String naslov, List<Product> listaProizvoda){
         this.id = id;
         this.datumKreiranja = datumKreiranja;
         this.naslov = naslov;
@@ -25,7 +25,7 @@ public class ProductsMetadata {
         Product drugiProdukt = new Product("Coca Cola", new BigDecimal("2"), new BigDecimal("5"), "EUR/kom");
         listaProizvoda.add(prviProdukt);
         listaProizvoda.add(drugiProdukt);
-        ProductsMetadata productsMetadata = new ProductsMetadata(1, localDate, "Neki naslov", listaProizvoda);
+        ProductsMetadata productsMetadata = new ProductsMetadata(1L, localDate, "Neki naslov", listaProizvoda);
         System.out.println(productsMetadata);
     }
 
